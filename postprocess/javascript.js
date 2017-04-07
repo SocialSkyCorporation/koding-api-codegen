@@ -1,5 +1,25 @@
 module.exports = [
-  ["/README.md", /YOUR_USERNAME/, "koding"],
+  ["/README.md", /YOUR_USERNAME/g, "koding"],
+  [
+    "/README.md",
+    /#### npm(?:\n|.)*####/,
+    `\`\`\`shell
+  npm install koding-api --save
+\`\`\`
+
+####`
+  ],
+  [
+    "/README.md",
+    /#### git(?:\n|.)*### For browser/,
+    `or
+
+\`\`\`shell
+  npm install koding/koding-api --save
+\`\`\`
+
+### For browser`
+  ],
   [
     "/README.md",
     /```javascript(?:\n|.)*```/,
