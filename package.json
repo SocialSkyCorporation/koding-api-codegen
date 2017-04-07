@@ -1,0 +1,34 @@
+{
+  "name": "koding-api-codegen",
+  "version": "0.0.1",
+  "description": "Koding API Codegen util for Koding's remote.api",
+  "main": "generate.js",
+  "dependencies": {
+    "request": "^2.81.0",
+    "unzip2": "^0.2.5"
+  },
+  "devDependencies": {
+    "request": "^2.81.0",
+    "shelljs": "^0.7.7",
+    "unzip2": "^0.2.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koding/koding-api-codegen.git"
+  },
+  "keywords": [
+    "koding",
+    "swagger",
+    "codegen",
+    "api"
+  ],
+  "author": "Gokmen Goksel <gokmen@goksel.me>",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/koding/koding-api-codegen/issues"
+  },
+  "homepage": "https://github.com/koding/koding-api-codegen#readme"
+}
