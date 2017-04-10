@@ -140,14 +140,6 @@
       "name": "JPasswordRecovery"
     },
     {
-      "description": "Model JProxyFilter",
-      "name": "JProxyFilter"
-    },
-    {
-      "description": "Model JProxyRestriction",
-      "name": "JProxyRestriction"
-    },
-    {
       "description": "Model JEarnedReward",
       "name": "JEarnedReward"
     },
@@ -809,7 +801,7 @@
         "slug": {
           "type": "string"
         },
-        "data": {
+        "payload": {
           "type": "object"
         }
       }
@@ -1123,65 +1115,6 @@
           "type": "string"
         },
         "requestedAt": {
-          "type": "string",
-          "format": "date"
-        }
-      }
-    },
-    "JProxyFilter": {
-      "type": "object",
-      "required": [
-        "name"
-      ],
-      "properties": {
-        "_id": {
-          "type": "string"
-        },
-        "name": {
-          "type": "string"
-        },
-        "rules": {
-          "type": "array",
-          "items": {
-            "type": "object"
-          }
-        },
-        "owner": {
-          "type": "string"
-        },
-        "createdAt": {
-          "type": "string",
-          "format": "date"
-        },
-        "modifiedAt": {
-          "type": "string",
-          "format": "date"
-        }
-      }
-    },
-    "JProxyRestriction": {
-      "type": "object",
-      "properties": {
-        "_id": {
-          "type": "string"
-        },
-        "domainName": {
-          "type": "string"
-        },
-        "filters": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "owner": {
-          "type": "string"
-        },
-        "createdAt": {
-          "type": "string",
-          "format": "date"
-        },
-        "modifiedAt": {
           "type": "string",
           "format": "date"
         }
@@ -6651,6 +6584,42 @@
         }
       }
     },
+    "/JGroupData.fetchByKey": {
+      "post": {
+        "tags": [
+          "JGroupData"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "operationId": "fetchByKey",
+        "parameters": [
+          {
+            "$ref": "#/parameters/bodyParam"
+          }
+        ],
+        "security": [
+          {
+            "Bearer": []
+          }
+        ],
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "Request processed successfully",
+            "schema": {
+              "$ref": "#/definitions/DefaultResponse"
+            }
+          },
+          "401": {
+            "description": "Unauthorized request",
+            "schema": {
+              "$ref": "#/definitions/UnauthorizedRequest"
+            }
+          }
+        }
+      }
+    },
     "/JGroup.one": {
       "post": {
         "tags": [
@@ -8054,7 +8023,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Method JGroup.fetchDataAt",
+        "description": "",
         "parameters": [
           {
             "$ref": "#/parameters/instanceParam"
@@ -8953,300 +8922,6 @@
           }
         ],
         "description": "Method JPasswordRecovery.fetchRegistrationDetails",
-        "responses": {
-          "200": {
-            "description": "Request processed successfully",
-            "schema": {
-              "$ref": "#/definitions/DefaultResponse"
-            }
-          },
-          "401": {
-            "description": "Unauthorized request",
-            "schema": {
-              "$ref": "#/definitions/UnauthorizedRequest"
-            }
-          }
-        }
-      }
-    },
-    "/JProxyFilter.create": {
-      "post": {
-        "tags": [
-          "JProxyFilter"
-        ],
-        "consumes": [
-          "application/json"
-        ],
-        "operationId": "create",
-        "parameters": [
-          {
-            "$ref": "#/parameters/bodyParam"
-          }
-        ],
-        "security": [
-          {
-            "Bearer": []
-          }
-        ],
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "Request processed successfully",
-            "schema": {
-              "$ref": "#/definitions/DefaultResponse"
-            }
-          },
-          "401": {
-            "description": "Unauthorized request",
-            "schema": {
-              "$ref": "#/definitions/UnauthorizedRequest"
-            }
-          }
-        }
-      }
-    },
-    "/JProxyFilter.some": {
-      "post": {
-        "tags": [
-          "JProxyFilter"
-        ],
-        "consumes": [
-          "application/json"
-        ],
-        "operationId": "some",
-        "parameters": [
-          {
-            "$ref": "#/parameters/bodyParam"
-          }
-        ],
-        "security": [
-          {
-            "Bearer": []
-          }
-        ],
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "Request processed successfully",
-            "schema": {
-              "$ref": "#/definitions/DefaultResponse"
-            }
-          },
-          "401": {
-            "description": "Unauthorized request",
-            "schema": {
-              "$ref": "#/definitions/UnauthorizedRequest"
-            }
-          }
-        }
-      }
-    },
-    "/JProxyFilter.remove/{id}": {
-      "post": {
-        "tags": [
-          "JProxyFilter"
-        ],
-        "operationId": "remove",
-        "security": [
-          {
-            "Bearer": []
-          }
-        ],
-        "consumes": [
-          "application/json"
-        ],
-        "description": "",
-        "parameters": [
-          {
-            "$ref": "#/parameters/instanceParam"
-          },
-          {
-            "$ref": "#/parameters/bodyParam"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "$ref": "#/definitions/DefaultResponse"
-            }
-          },
-          "401": {
-            "description": "Unauthorized request",
-            "schema": {
-              "$ref": "#/definitions/UnauthorizedRequest"
-            }
-          }
-        }
-      }
-    },
-    "/JProxyFilter.update/{id}": {
-      "post": {
-        "tags": [
-          "JProxyFilter"
-        ],
-        "operationId": "update",
-        "security": [
-          {
-            "Bearer": []
-          }
-        ],
-        "consumes": [
-          "application/json"
-        ],
-        "description": "",
-        "parameters": [
-          {
-            "$ref": "#/parameters/instanceParam"
-          },
-          {
-            "$ref": "#/parameters/bodyParam"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "$ref": "#/definitions/DefaultResponse"
-            }
-          },
-          "401": {
-            "description": "Unauthorized request",
-            "schema": {
-              "$ref": "#/definitions/UnauthorizedRequest"
-            }
-          }
-        }
-      }
-    },
-    "/JProxyRestriction.create": {
-      "post": {
-        "tags": [
-          "JProxyRestriction"
-        ],
-        "consumes": [
-          "application/json"
-        ],
-        "operationId": "create",
-        "parameters": [
-          {
-            "$ref": "#/parameters/bodyParam"
-          }
-        ],
-        "security": [
-          {
-            "Bearer": []
-          }
-        ],
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "Request processed successfully",
-            "schema": {
-              "$ref": "#/definitions/DefaultResponse"
-            }
-          },
-          "401": {
-            "description": "Unauthorized request",
-            "schema": {
-              "$ref": "#/definitions/UnauthorizedRequest"
-            }
-          }
-        }
-      }
-    },
-    "/JProxyRestriction.remove": {
-      "post": {
-        "tags": [
-          "JProxyRestriction"
-        ],
-        "consumes": [
-          "application/json"
-        ],
-        "operationId": "remove",
-        "parameters": [
-          {
-            "$ref": "#/parameters/bodyParam"
-          }
-        ],
-        "security": [
-          {
-            "Bearer": []
-          }
-        ],
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "Request processed successfully",
-            "schema": {
-              "$ref": "#/definitions/DefaultResponse"
-            }
-          },
-          "401": {
-            "description": "Unauthorized request",
-            "schema": {
-              "$ref": "#/definitions/UnauthorizedRequest"
-            }
-          }
-        }
-      }
-    },
-    "/JProxyRestriction.some": {
-      "post": {
-        "tags": [
-          "JProxyRestriction"
-        ],
-        "consumes": [
-          "application/json"
-        ],
-        "operationId": "some",
-        "parameters": [
-          {
-            "$ref": "#/parameters/bodyParam"
-          }
-        ],
-        "security": [
-          {
-            "Bearer": []
-          }
-        ],
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "Request processed successfully",
-            "schema": {
-              "$ref": "#/definitions/DefaultResponse"
-            }
-          },
-          "401": {
-            "description": "Unauthorized request",
-            "schema": {
-              "$ref": "#/definitions/UnauthorizedRequest"
-            }
-          }
-        }
-      }
-    },
-    "/JProxyRestriction.clear": {
-      "post": {
-        "tags": [
-          "JProxyRestriction"
-        ],
-        "consumes": [
-          "application/json"
-        ],
-        "operationId": "clear",
-        "parameters": [
-          {
-            "$ref": "#/parameters/bodyParam"
-          }
-        ],
-        "security": [
-          {
-            "Bearer": []
-          }
-        ],
-        "description": "",
         "responses": {
           "200": {
             "description": "Request processed successfully",
