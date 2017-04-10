@@ -1,4 +1,5 @@
 module.exports = [
+  ["/package.json", /Unlicense/g, "Apache-2.0"],
   ["/README.md", /YOUR_USERNAME/g, "koding"],
   [
     "/README.md",

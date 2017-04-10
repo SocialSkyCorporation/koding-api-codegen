@@ -24,6 +24,7 @@ function getPostBody(swaggerObj) {
       usePromises: true,
       emitJSDoc: true,
       apiPackage: packageName,
+      projectDescription: "Koding API for integrating your application with Koding services",
       modelPackage: packageName
     }
   };
