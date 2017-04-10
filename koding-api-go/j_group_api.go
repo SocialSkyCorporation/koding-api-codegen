@@ -889,7 +889,7 @@ func (a JGroupApi) FetchBlockedAccountsWithEmail(id string, body DefaultSelector
 
 /**
  * 
- * Method JGroup.fetchDataAt
+ * 
  *
  * @param id Mongo ID of target instance
  * @param body body of the request

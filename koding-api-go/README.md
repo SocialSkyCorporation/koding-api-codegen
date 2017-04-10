@@ -154,6 +154,7 @@ Class | Method | HTTP request | Description
 *JGroupApi* | [**TransferOwnership**](docs/JGroupApi.md#transferownership) | **Post** /JGroup.transferOwnership/{id} | 
 *JGroupApi* | [**UnblockMember**](docs/JGroupApi.md#unblockmember) | **Post** /JGroup.unblockMember/{id} | 
 *JGroupApi* | [**UpdatePermissions**](docs/JGroupApi.md#updatepermissions) | **Post** /JGroup.updatePermissions/{id} | 
+*JGroupDataApi* | [**FetchByKey**](docs/JGroupDataApi.md#fetchbykey) | **Post** /JGroupData.fetchByKey | 
 *JInvitationApi* | [**Accept**](docs/JInvitationApi.md#accept) | **Post** /JInvitation.accept/{id} | 
 *JInvitationApi* | [**ByCode**](docs/JInvitationApi.md#bycode) | **Post** /JInvitation.byCode | 
 *JInvitationApi* | [**Create**](docs/JInvitationApi.md#create) | **Post** /JInvitation.create | 
@@ -194,14 +195,6 @@ Class | Method | HTTP request | Description
 *JProvisionerApi* | [**SetAccess**](docs/JProvisionerApi.md#setaccess) | **Post** /JProvisioner.setAccess/{id} | 
 *JProvisionerApi* | [**Some**](docs/JProvisionerApi.md#some) | **Post** /JProvisioner.some | 
 *JProvisionerApi* | [**Update**](docs/JProvisionerApi.md#update) | **Post** /JProvisioner.update/{id} | 
-*JProxyFilterApi* | [**Create**](docs/JProxyFilterApi.md#create) | **Post** /JProxyFilter.create | 
-*JProxyFilterApi* | [**Remove**](docs/JProxyFilterApi.md#remove) | **Post** /JProxyFilter.remove/{id} | 
-*JProxyFilterApi* | [**Some**](docs/JProxyFilterApi.md#some) | **Post** /JProxyFilter.some | 
-*JProxyFilterApi* | [**Update**](docs/JProxyFilterApi.md#update) | **Post** /JProxyFilter.update/{id} | 
-*JProxyRestrictionApi* | [**Clear**](docs/JProxyRestrictionApi.md#clear) | **Post** /JProxyRestriction.clear | 
-*JProxyRestrictionApi* | [**Create**](docs/JProxyRestrictionApi.md#create) | **Post** /JProxyRestriction.create | 
-*JProxyRestrictionApi* | [**Remove**](docs/JProxyRestrictionApi.md#remove) | **Post** /JProxyRestriction.remove | 
-*JProxyRestrictionApi* | [**Some**](docs/JProxyRestrictionApi.md#some) | **Post** /JProxyRestriction.some | 
 *JRewardApi* | [**AddCustomReward**](docs/JRewardApi.md#addcustomreward) | **Post** /JReward.addCustomReward | 
 *JRewardApi* | [**FetchCustomData**](docs/JRewardApi.md#fetchcustomdata) | **Post** /JReward.fetchCustomData | 
 *JRewardApi* | [**FetchEarnedAmount**](docs/JRewardApi.md#fetchearnedamount) | **Post** /JReward.fetchEarnedAmount | 
@@ -363,8 +356,6 @@ Class | Method | HTTP request | Description
  - [JProposedDomain](docs/JProposedDomain.md)
  - [JProposedDomainProxy](docs/JProposedDomainProxy.md)
  - [JProvisioner](docs/JProvisioner.md)
- - [JProxyFilter](docs/JProxyFilter.md)
- - [JProxyRestriction](docs/JProxyRestriction.md)
  - [JReward](docs/JReward.md)
  - [JRewardCampaign](docs/JRewardCampaign.md)
  - [JSession](docs/JSession.md)

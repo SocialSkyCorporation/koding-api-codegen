@@ -16,5 +16,5 @@ type JGroupData struct {
 
 	Slug string `json:"slug,omitempty"`
 
-	Data interface{} `json:"data,omitempty"`
+	Payload interface{} `json:"payload,omitempty"`
 }
