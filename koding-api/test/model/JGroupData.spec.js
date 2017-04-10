@@ -66,8 +66,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property data (base name: "data")', function() {
-      // uncomment below and update the code to test the property data
+    it('should have the property payload (base name: "payload")', function() {
+      // uncomment below and update the code to test the property payload
       //var instane = new KodingApi.JGroupData();
       //expect(instance).to.be();
     });

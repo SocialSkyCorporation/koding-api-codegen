@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new KodingApi.JProxyFilterApi();
+    instance = new KodingApi.JGroupDataApi();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,41 +47,11 @@
       object[property] = value;
   }
 
-  describe('JProxyFilterApi', function() {
-    describe('create', function() {
-      it('should call create successfully', function(done) {
-        //uncomment below and update the code to test create
-        //instance.create(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('remove', function() {
-      it('should call remove successfully', function(done) {
-        //uncomment below and update the code to test remove
-        //instance.remove(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('some', function() {
-      it('should call some successfully', function(done) {
-        //uncomment below and update the code to test some
-        //instance.some(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('update', function() {
-      it('should call update successfully', function(done) {
-        //uncomment below and update the code to test update
-        //instance.update(function(error) {
+  describe('JGroupDataApi', function() {
+    describe('fetchByKey', function() {
+      it('should call fetchByKey successfully', function(done) {
+        //uncomment below and update the code to test fetchByKey
+        //instance.fetchByKey(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
