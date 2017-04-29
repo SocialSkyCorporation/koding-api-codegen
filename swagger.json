@@ -3649,6 +3649,42 @@
         }
       }
     },
+    "/ComputeProvider.setGroupStack": {
+      "post": {
+        "tags": [
+          "ComputeProvider"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "operationId": "setGroupStack",
+        "parameters": [
+          {
+            "$ref": "#/parameters/bodyParam"
+          }
+        ],
+        "security": [
+          {
+            "Bearer": []
+          }
+        ],
+        "description": "Method ComputeProvider.setGroupStack",
+        "responses": {
+          "200": {
+            "description": "Request processed successfully",
+            "schema": {
+              "$ref": "#/definitions/DefaultResponse"
+            }
+          },
+          "401": {
+            "description": "Unauthorized request",
+            "schema": {
+              "$ref": "#/definitions/UnauthorizedRequest"
+            }
+          }
+        }
+      }
+    },
     "/JCredential.one": {
       "post": {
         "tags": [
@@ -5395,20 +5431,38 @@
             "schema": {
               "type": "object",
               "properties": {
-                "json": {
-                  "type": "string",
-                  "default": "{}"
+                "ok": {
+                  "type": "boolean",
+                  "description": "If the request processed by endpoint",
+                  "example": true
                 },
-                "yaml": {
-                  "type": "string",
-                  "default": "--"
+                "error": {
+                  "type": "object",
+                  "description": "Error description",
+                  "example": {
+                    "message": "Something went wrong",
+                    "name": "SomethingWentWrong"
+                  }
                 },
-                "defaults": {
+                "data": {
                   "type": "object",
                   "properties": {
-                    "userInputs": {
+                    "json": {
+                      "type": "string",
+                      "default": "{}"
+                    },
+                    "yaml": {
+                      "type": "string",
+                      "default": "--"
+                    },
+                    "defaults": {
                       "type": "object",
-                      "properties": {}
+                      "properties": {
+                        "userInputs": {
+                          "type": "object",
+                          "properties": {}
+                        }
+                      }
                     }
                   }
                 }
@@ -8023,7 +8077,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "",
+        "description": "Method JGroup.fetchDataAt",
         "parameters": [
           {
             "$ref": "#/parameters/instanceParam"

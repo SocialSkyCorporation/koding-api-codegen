@@ -1,4 +1,4 @@
-# KodingApi.InlineResponse200Defaults
+# KodingApi.InlineResponse200DataDefaults
 
 ## Properties
 Name | Type | Description | Notes

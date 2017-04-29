@@ -23,7 +23,7 @@
     if (!root.KodingApi) {
       root.KodingApi = {};
     }
-    root.KodingApi.InlineResponse200Defaults = factory(root.KodingApi.ApiClient);
+    root.KodingApi.InlineResponse200DataDefaults = factory(root.KodingApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -32,14 +32,14 @@
 
 
   /**
-   * The InlineResponse200Defaults model module.
-   * @module koding-api/InlineResponse200Defaults
+   * The InlineResponse200DataDefaults model module.
+   * @module koding-api/InlineResponse200DataDefaults
    * @version 0.0.3
    */
 
   /**
-   * Constructs a new <code>InlineResponse200Defaults</code>.
-   * @alias module:koding-api/InlineResponse200Defaults
+   * Constructs a new <code>InlineResponse200DataDefaults</code>.
+   * @alias module:koding-api/InlineResponse200DataDefaults
    * @class
    */
   var exports = function() {
@@ -49,11 +49,11 @@
   };
 
   /**
-   * Constructs a <code>InlineResponse200Defaults</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>InlineResponse200DataDefaults</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:koding-api/InlineResponse200Defaults} obj Optional instance to populate.
-   * @return {module:koding-api/InlineResponse200Defaults} The populated <code>InlineResponse200Defaults</code> instance.
+   * @param {module:koding-api/InlineResponse200DataDefaults} obj Optional instance to populate.
+   * @return {module:koding-api/InlineResponse200DataDefaults} The populated <code>InlineResponse200DataDefaults</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
