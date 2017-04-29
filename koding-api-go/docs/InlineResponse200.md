@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Json** | **string** |  | [optional] [default to null]
-**Yaml** | **string** |  | [optional] [default to null]
-**Defaults** | [**InlineResponse200Defaults**](inline_response_200_defaults.md) |  | [optional] [default to null]
+**Ok** | **bool** | If the request processed by endpoint | [optional] [default to null]
+**Error_** | [**interface{}**](interface{}.md) | Error description | [optional] [default to null]
+**Data** | [**InlineResponse200Data**](inline_response_200_data.md) |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -30,6 +30,7 @@ Class | Method | HTTP request | Description
 *ComputeProviderApi* | [**FetchProviders**](docs/ComputeProviderApi.md#fetchproviders) | **Post** /ComputeProvider.fetchProviders | 
 *ComputeProviderApi* | [**Ping**](docs/ComputeProviderApi.md#ping) | **Post** /ComputeProvider.ping | 
 *ComputeProviderApi* | [**Remove**](docs/ComputeProviderApi.md#remove) | **Post** /ComputeProvider.remove | 
+*ComputeProviderApi* | [**SetGroupStack**](docs/ComputeProviderApi.md#setgroupstack) | **Post** /ComputeProvider.setGroupStack | 
 *ComputeProviderApi* | [**Update**](docs/ComputeProviderApi.md#update) | **Post** /ComputeProvider.update | 
 *ComputeProviderApi* | [**UpdateTeamCounters**](docs/ComputeProviderApi.md#updateteamcounters) | **Post** /ComputeProvider.updateTeamCounters | 
 *DataDogApi* | [**SendEvent**](docs/DataDogApi.md#sendevent) | **Post** /DataDog.sendEvent | 
@@ -325,7 +326,8 @@ Class | Method | HTTP request | Description
  - [DefaultResponse](docs/DefaultResponse.md)
  - [DefaultSelector](docs/DefaultSelector.md)
  - [InlineResponse200](docs/InlineResponse200.md)
- - [InlineResponse200Defaults](docs/InlineResponse200Defaults.md)
+ - [InlineResponse200Data](docs/InlineResponse200Data.md)
+ - [InlineResponse200DataDefaults](docs/InlineResponse200DataDefaults.md)
  - [JAccount](docs/JAccount.md)
  - [JAccountProfile](docs/JAccountProfile.md)
  - [JApiToken](docs/JApiToken.md)

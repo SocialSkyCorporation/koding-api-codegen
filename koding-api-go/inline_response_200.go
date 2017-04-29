@@ -12,9 +12,11 @@ package swagger
 
 type InlineResponse200 struct {
 
-	Json string `json:"json,omitempty"`
+	// If the request processed by endpoint
+	Ok bool `json:"ok,omitempty"`
 
-	Yaml string `json:"yaml,omitempty"`
+	// Error description
+	Error_ interface{} `json:"error,omitempty"`
 
-	Defaults InlineResponse200Defaults `json:"defaults,omitempty"`
+	Data InlineResponse200Data `json:"data,omitempty"`
 }
